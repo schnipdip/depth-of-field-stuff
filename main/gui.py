@@ -10,15 +10,17 @@ subjectDistance = 100
 
 farDistance = sharpnessFar(focalLength, aperture, camera, subjectDistance)
 nearDistance = sharpnessNear(focalLength, aperture, camera, subjectDistance)
+hyperfocalDistance = hyperfocal(focalLength, aperture, camera)
 
 
 #convert mm to ft
 farDistance = farDistance.calculate_sharpnessFar() / 304.8
 nearDistance = nearDistance.calculate_sharpnessNear() / 304.8
+hyperfocalDistance = hyperfocalDistance.calculate_hyperfocal() / 304.8
 
 print(
     'Depth of Field Far Limit(ft):', int(round(farDistance)), 
     '\nDepth of Field Near Limit(ft):', int(round(nearDistance)),
-    '\nDepth of Fiend(ft):', round(farDistance - nearDistance, 1)
+    '\nDepth of Fiend(ft):', round(farDistance - nearDistance, 1),
+    '\nHyperfocal Distance(ft):', round(hyperfocalDistance, 1)
     )
-
