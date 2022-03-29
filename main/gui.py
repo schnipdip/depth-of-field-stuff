@@ -18,6 +18,7 @@ nearDistance = nearDistance.calculate_sharpnessNear() / 304.8
 
 print(
     'Depth of Field Far Limit(ft):', int(round(farDistance)), 
-    '\nDepth of Field Near Limit(ft):', int(round(nearDistance))
+    '\nDepth of Field Near Limit(ft):', int(round(nearDistance)),
+    '\nDepth of Fiend(ft):', round(farDistance - nearDistance, 1)
     )
 
