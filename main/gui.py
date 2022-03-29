@@ -16,4 +16,8 @@ nearDistance = sharpnessNear(focalLength, aperture, camera, subjectDistance)
 farDistance = farDistance.calculate_sharpnessFar() / 304.8
 nearDistance = nearDistance.calculate_sharpnessNear() / 304.8
 
-print(int(round(farDistance)), int(round(nearDistance)))
+print(
+    'Depth of Field Far Limit(ft):', int(round(farDistance)), 
+    '\nDepth of Field Near Limit(ft):', int(round(nearDistance))
+    )
+
